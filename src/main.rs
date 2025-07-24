@@ -10,5 +10,7 @@ fn main() -> Status {
     info!("Hi");
     boot::stall(10_000_000);
 
+    let map = unsafe { boot::exit_boot_services(None) };
+
     Status::SUCCESS
 }
